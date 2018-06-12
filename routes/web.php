@@ -12,9 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/visualizer', function(){
+    return view('visualizer');
 });
+
+Route::get('/workload-allocator', function(){
+    return view('workloadAllocator');
+});
+
+Route::get('/pattern-builder', 'ActivityController@index');
+
+
+Route::get('/uploader', function(){
+    return view('uploader');
+});
+
+// COMPONENTS
+
+Route::get('/staff', 'StaffController@index');
