@@ -12,12 +12,13 @@
     <!-- endinject -->
     <!-- inject:css -->
     <link rel="stylesheet" href="{{asset('PurpleAdmin/css/style2.css')}}">
+    <link rel="stylesheet" href="{{asset('PurpleAdmin/css/app.css')}}">
     <!-- endinject -->
     <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/700552034311753728/fq2jJ1Dz_400x400.png" />
 </head>
 
 <body>
-    <div class="container-scroller">
+    <div class="container-scroller" id="app">
 
         <!-- partial:partials/_navbar.html -->
         {{-- <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -31,7 +32,6 @@
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            
             <!-- Sidebar -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
@@ -123,7 +123,7 @@
         <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
-
+    <script src="{{asset('js/app.js')}}"></script>
     <!-- plugins:js -->
     <script src="{{asset('PurpleAdmin/vendors/js/vendor.bundle.base.js')}}"></script>
     <script src="{{asset('PurpleAdmin/vendors/js/vendor.bundle.addons.js')}}"></script>
