@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Staff;
+use App\Unit;
 use Illuminate\Http\Request;
 
-class StaffController extends Controller
+class UnitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class StaffController extends Controller
      */
     public function index()
     {
-        $staff = Staff::all();
+        $units = Unit::latest()->get();
 
-        return view('staff.index', compact('staff'));
+        return view('unit.index', compact('units'));
     }
 
     /**
@@ -37,30 +37,25 @@ class StaffController extends Controller
      */
     public function store(Request $request)
     {
-        
         $valid = $request->validate([
-            'first_name' => 'required|min:2|string',
-            'last_name' => 'required|min:2|string',
-            'other' => 'nullable|string'
+            'code' => 'required|min:6|max:10',
+            'name' => 'required|min:2'
         ]);
-
         if($valid){
-            Staff::create([
-                'first_name' => $request->input('first_name'),
-                'last_name' => $request->input('last_name'),
-                'other' => $request->input('other'),
+            Unit::create([
+                'code' => $request->input('code'),
+                'name' => $request->input('name')
             ]);
         }
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Staff  $staff
+     * @param  \App\Unit  $unit
      * @return \Illuminate\Http\Response
      */
-    public function show(Staff $staff)
+    public function show(Unit $unit)
     {
         //
     }
@@ -68,10 +63,10 @@ class StaffController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Staff  $staff
+     * @param  \App\Unit  $unit
      * @return \Illuminate\Http\Response
      */
-    public function edit(Staff $staff)
+    public function edit(Unit $unit)
     {
         //
     }
@@ -80,10 +75,10 @@ class StaffController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Staff  $staff
+     * @param  \App\Unit  $unit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Staff $staff)
+    public function update(Request $request, Unit $unit)
     {
         //
     }
@@ -91,10 +86,10 @@ class StaffController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Staff  $staff
+     * @param  \App\Unit  $unit
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Staff $staff)
+    public function destroy(Unit $unit)
     {
         //
     }

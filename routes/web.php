@@ -32,4 +32,13 @@ Route::get('/uploader', function(){
 
 // COMPONENTS
 
-Route::get('/staff', 'StaffController@index');
+Route::prefix('data')->group(function(){
+    
+    Route::get('staff', 'StaffController@index');
+    Route::post('staff', 'StaffController@store');
+
+    Route::get('units', 'UnitController@index');
+    Route::post('units', 'UnitController@store');
+});
+
+
