@@ -12,6 +12,7 @@ window.Vue = require('vue');
 
 Vue.use(BootstrapVue);
 
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -19,10 +20,15 @@ Vue.use(BootstrapVue);
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('create-staff', require('./components/staff/CreateStaffComponent.vue'));
+Vue.component('create-unit', require('./components/unit/CreateUnitComponent.vue'));
 
 const app = new Vue({
     el: '#app',
     data: {
         message: 'Hello'
+    },
+    methods: {
+      
     }
 });

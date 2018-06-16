@@ -1,4 +1,4 @@
-<div class="tab-content" id="myTabContent">
+{{-- <div class="tab-content" id="myTabContent">
 
     @include('unit.partials.tabs.uploader')
     
@@ -6,4 +6,4 @@
 
     @include('unit.partials.tabs.all-units')
     
-</div>
+</div> --}}

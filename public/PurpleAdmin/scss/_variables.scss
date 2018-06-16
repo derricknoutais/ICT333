@@ -53,7 +53,7 @@ $theme-colors: (
 
 $theme-gradient-colors: (
   primary:         linear-gradient(to right, #fe7096, #f7003a),
-  secondary:       linear-gradient(to right, #e7ebf0, #868e96),
+  secondary:       linear-gradient(to left, #fe7096, #f7003a),
   success:         linear-gradient(to right, #84d9d2, #07cdae),
   info:            linear-gradient(to right, #90caf9, #047edf 99%),
   warning:         linear-gradient(to right, #f6e384, #ffd500),

@@ -1,11 +1,11 @@
 <b-tabs pills card vertical class="bg-white border-right">
     <b-tab title="Uploader">
-        @include('staff.partials.tabs.uploader')
+        @include('offering.partials.tabs.uploader')
     </b-tab>
     <b-tab title="Recently Uploaded">
-        @include('staff.partials.tabs.recently-added')
+        @include('offering.partials.tabs.recently-added')
     </b-tab>
     <b-tab title="All Staff">
-        @include('staff.partials.tabs.all-staff')
+        @include('offering.partials.tabs.all-offerings')
     </b-tab>
 </b-tabs>

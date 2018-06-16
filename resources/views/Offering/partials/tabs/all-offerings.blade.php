@@ -28,7 +28,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($staff as $person)
+                    {{-- @foreach($staff as $person)
                     <tr>
                         <td><a href="/staff/{{$person->id}}">{{$person->first_name}} {{$person->last_name}}</td>
                         <td class="text-danger"></td>
@@ -36,7 +36,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    @endforeach
+                    @endforeach --}}
 
                 </tbody>
             </table>

@@ -35,18 +35,21 @@ class UnitController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $valid = $request->validate([
+        $valid = $this->validate(request(), [
             'code' => 'required|min:6|max:10',
             'name' => 'required|min:2'
         ]);
-        if($valid){
-            Unit::create([
-                'code' => $request->input('code'),
-                'name' => $request->input('name')
-            ]);
-        }
+
+        // if($valid){
+        Unit::create([
+            'code' => request('code'),
+            'name' => request('name'),
+        ]);
+
+        return ['message' => 'Staff Created Successfully!'];
+        
     }
 
     /**

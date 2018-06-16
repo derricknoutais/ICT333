@@ -5,14 +5,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="<?php echo csrf_token() ?>" />
     <title>Murdoch Workload Manager</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('PurpleAdmin/vendors/iconfonts/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('PurpleAdmin/vendors/css/vendor.bundle.base.css')}}">
     <!-- endinject -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="{{asset('PurpleAdmin/css/style2.css')}}">
-    <link rel="stylesheet" href="{{asset('PurpleAdmin/css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('PurpleAdmin/css/style.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('PurpleAdmin/css/app.css')}}"> --}}
     <!-- endinject -->
     <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/700552034311753728/fq2jJ1Dz_400x400.png" />
 </head>
@@ -71,8 +72,9 @@
                         </a>
                     </li> 
                     <!-- Data -->
+                    
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" role="button" aria-expanded="false" aria-controls="ui-basic">
                             <span class="menu-title">Data</span>
                             <i class="menu-arrow"></i>
                             <i class="mdi mdi-database menu-icon"></i>
@@ -92,7 +94,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/offerings">
+                                    <a class="nav-link" href="/data/offerings">
                                         <span class="menu-title">Offerings</span>
                                         <i class="mdi mdi-human-handsdown menu-icon"></i>
                                     </a>
