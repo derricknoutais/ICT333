@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Staff;
+use App\Offering;
 use Illuminate\Http\Request;
 
-class StaffController extends Controller
+class OfferingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class StaffController extends Controller
      */
     public function index()
     {
-        $staff = Staff::all();
+        $offerings = Offering::latest()->get();
 
-        return view('staff.index', compact('staff'));
+        return view('offering.index', compact('offerings'));
     }
 
     /**
@@ -35,33 +35,18 @@ class StaffController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        
-        $valid = $this->validate(request(), [
-            'first_name' => 'required|min:2|integer',
-            'last_name' => 'required|min:2|string',
-            'other' => 'nullable|string'
-        ]);
-
-        // if($valid){
-        Staff::create([
-            'first_name' => request('first_name'),
-            'last_name' => request('last_name'),
-        ]);
-        
-        return ['message' => 'Staff Created Successfully!'];
-        // }
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Staff  $staff
+     * @param  \App\Offering  $offering
      * @return \Illuminate\Http\Response
      */
-    public function show(Staff $staff)
+    public function show(Offering $offering)
     {
         //
     }
@@ -69,10 +54,10 @@ class StaffController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Staff  $staff
+     * @param  \App\Offering  $offering
      * @return \Illuminate\Http\Response
      */
-    public function edit(Staff $staff)
+    public function edit(Offering $offering)
     {
         //
     }
@@ -81,10 +66,10 @@ class StaffController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Staff  $staff
+     * @param  \App\Offering  $offering
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Staff $staff)
+    public function update(Request $request, Offering $offering)
     {
         //
     }
@@ -92,10 +77,10 @@ class StaffController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Staff  $staff
+     * @param  \App\Offering  $offering
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Staff $staff)
+    public function destroy(Offering $offering)
     {
         //
     }

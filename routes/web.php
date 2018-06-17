@@ -39,6 +39,16 @@ Route::prefix('data')->group(function(){
 
     Route::get('units', 'UnitController@index');
     Route::post('units', 'UnitController@store');
+
+    Route::get('offerings', 'OfferingController@index');
+    Route::get('patterns', 'PatternController@index');
+    
+});
+
+
+Route::prefix('api/data/post')->group(function(){
+    Route::post('staff', 'StaffController@store');
+    Route::post('unit', 'UnitController@store');
 });
 
 

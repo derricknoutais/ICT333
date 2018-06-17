@@ -7012,7 +7012,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #343a40;
+  color: #000;
   background-color: #ffffff;
   border-color: #ebedf2 #ebedf2 #ffffff;
 }
@@ -7025,12 +7025,13 @@ input[type="button"].btn-block {
 
 .nav-pills .nav-link {
   border-radius: 0.25rem;
+  color: #3e4b5b;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #007bff;
+  color: #ffffff;
+  background-color: #fe7096;
 }
 
 .nav-fill .nav-item {
@@ -13261,8 +13262,8 @@ input:focus {
 }
 
 .bg-gradient-secondary {
-  background: -webkit-gradient(linear, left top, right top, from(#e7ebf0), to(#868e96));
-  background: linear-gradient(to right, #e7ebf0, #868e96);
+  background: -webkit-gradient(linear, right top, left top, from(#fe7096), to(#f7003a));
+  background: linear-gradient(to left, #fe7096, #f7003a);
 }
 
 .bg-gradient-success {
@@ -14988,8 +14989,8 @@ code {
 }
 
 .badge-gradient-secondary {
-  background: -webkit-gradient(linear, left top, right top, from(#e7ebf0), to(#868e96));
-  background: linear-gradient(to right, #e7ebf0, #868e96);
+  background: -webkit-gradient(linear, right top, left top, from(#fe7096), to(#f7003a));
+  background: linear-gradient(to left, #fe7096, #f7003a);
   color: #ffffff;
 }
 
@@ -15607,8 +15608,8 @@ code {
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus,
 .btn-outline-secondary:active {
-  background: -webkit-gradient(linear, left top, right top, from(#e7ebf0), to(#868e96));
-  background: linear-gradient(to right, #e7ebf0, #868e96);
+  background: -webkit-gradient(linear, right top, left top, from(#fe7096), to(#f7003a));
+  background: linear-gradient(to left, #fe7096, #f7003a);
   color: #ffffff;
 }
 
@@ -16003,8 +16004,8 @@ code {
 }
 
 .btn-gradient-secondary {
-  background: -webkit-gradient(linear, left top, right top, from(#e7ebf0), to(#868e96));
-  background: linear-gradient(to right, #e7ebf0, #868e96);
+  background: -webkit-gradient(linear, right top, left top, from(#fe7096), to(#f7003a));
+  background: linear-gradient(to left, #fe7096, #f7003a);
   border: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -16013,8 +16014,8 @@ code {
 .btn-gradient-secondary:not([disabled]):not(.disabled):active,
 .btn-gradient-secondary:not([disabled]):not(.disabled).active,
 .show > .btn-gradient-secondary.dropdown-toggle {
-  background: -webkit-gradient(linear, left top, right top, from(#e7ebf0), to(#868e96));
-  background: linear-gradient(to right, #e7ebf0, #868e96);
+  background: -webkit-gradient(linear, right top, left top, from(#fe7096), to(#f7003a));
+  background: linear-gradient(to left, #fe7096, #f7003a);
 }
 
 .btn-gradient-secondary:hover {
@@ -16524,8 +16525,8 @@ code {
 
 .form-check-secondary.form-check label input[type="checkbox"]:checked + .input-helper:before,
 .form-check-secondary.form-check label input[type="radio"]:checked + .input-helper:before {
-  background: -webkit-gradient(linear, left top, right top, from(#e7ebf0), to(#868e96));
-  background: linear-gradient(to right, #e7ebf0, #868e96);
+  background: -webkit-gradient(linear, right top, left top, from(#fe7096), to(#f7003a));
+  background: linear-gradient(to left, #fe7096, #f7003a);
 }
 
 .form-check-success.form-check label input[type="checkbox"] + .input-helper:before,

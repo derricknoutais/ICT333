@@ -20241,12 +20241,16 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_bootstrap_vue__["a" /* default */]);
  */
 
 Vue.component('example-component', __webpack_require__(216));
+Vue.component('create-staff', __webpack_require__(219));
+Vue.component('create-unit', __webpack_require__(222));
+Vue.component('create-offering', __webpack_require__(248));
 
 var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello'
-  }
+  },
+  methods: {}
 });
 
 /***/ }),
@@ -64461,12 +64465,427 @@ if (false) {
 }
 
 /***/ }),
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(36)
+/* script */
+var __vue_script__ = __webpack_require__(220)
+/* template */
+var __vue_template__ = __webpack_require__(221)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/staff/CreateStaffComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-576fa95f", Component.options)
+  } else {
+    hotAPI.reload("data-v-576fa95f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 220 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            first_name: '',
+            last_name: '',
+            errors: {}
+        };
+    },
+    methods: {
+        onSubmit: function onSubmit() {
+            var _this = this;
+
+            axios.post('/api/data/post/staff', {
+                first_name: this.first_name,
+                last_name: this.last_name
+            }).then(function (response) {
+                return console.log(response);
+            }).catch(function (error) {
+                return _this.errors = error.response.data.errors;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-form",
+    {
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+          return _vm.onSubmit($event)
+        }
+      }
+    },
+    [
+      _c(
+        "b-form-group",
+        { attrs: { label: "First Name" } },
+        [
+          _c("b-form-input", {
+            attrs: { placeholder: "Input the staff member's first name." },
+            model: {
+              value: _vm.first_name,
+              callback: function($$v) {
+                _vm.first_name = typeof $$v === "string" ? $$v.trim() : $$v
+              },
+              expression: "first_name"
+            }
+          }),
+          _vm._v(" "),
+          _vm.errors.first_name
+            ? _c(
+                "div",
+                _vm._l(_vm.errors.first_name, function(error) {
+                  return _c("p", { staticClass: "text-primary" }, [
+                    _vm._v(_vm._s(error))
+                  ])
+                })
+              )
+            : _vm._e()
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-form-group",
+        { attrs: { label: "Last Name" } },
+        [
+          _c("b-form-input", {
+            attrs: { placeholder: "Input the staff member's last name." },
+            model: {
+              value: _vm.last_name,
+              callback: function($$v) {
+                _vm.last_name = typeof $$v === "string" ? $$v.trim() : $$v
+              },
+              expression: "last_name"
+            }
+          }),
+          _vm._v(" "),
+          _vm.errors.last_name
+            ? _c(
+                "div",
+                _vm._l(_vm.errors.last_name, function(error) {
+                  return _c("p", { staticClass: "text-primary" }, [
+                    _vm._v(_vm._s(error))
+                  ])
+                })
+              )
+            : _vm._e()
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-button",
+        { attrs: { type: "submit", variant: "gradient-primary" } },
+        [_vm._v("Submit")]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-576fa95f", module.exports)
+  }
+}
+
+/***/ }),
+/* 222 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(36)
+/* script */
+var __vue_script__ = __webpack_require__(223)
+/* template */
+var __vue_template__ = __webpack_require__(224)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/unit/CreateUnitComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-c5373dae", Component.options)
+  } else {
+    hotAPI.reload("data-v-c5373dae", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 223 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            code: '',
+            name: '',
+            errors: {}
+        };
+    },
+    methods: {
+        onSubmit: function onSubmit() {
+            var _this = this;
+
+            axios.post('/api/data/post/unit', {
+                code: this.code,
+                name: this.name
+            }).then(function (response) {
+                return console.log(response);
+            }).catch(function (error) {
+                return _this.errors = error.response.data.errors;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-form",
+    {
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+          return _vm.onSubmit($event)
+        }
+      }
+    },
+    [
+      _c(
+        "b-form-group",
+        { attrs: { label: "Unit Code", description: "e.g:ICT103" } },
+        [
+          _c("b-form-input", {
+            attrs: { placeholder: "Input the unit code." },
+            model: {
+              value: _vm.code,
+              callback: function($$v) {
+                _vm.code = typeof $$v === "string" ? $$v.trim() : $$v
+              },
+              expression: "code"
+            }
+          }),
+          _vm._v(" "),
+          _vm.errors.code
+            ? _c(
+                "div",
+                _vm._l(_vm.errors.code, function(error) {
+                  return _c("p", { staticClass: "text-primary" }, [
+                    _vm._v(_vm._s(error))
+                  ])
+                })
+              )
+            : _vm._e()
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-form-group",
+        { attrs: { label: "Unit Name" } },
+        [
+          _c("b-form-input", {
+            attrs: { placeholder: "Input the unit name." },
+            model: {
+              value: _vm.name,
+              callback: function($$v) {
+                _vm.name = typeof $$v === "string" ? $$v.trim() : $$v
+              },
+              expression: "name"
+            }
+          }),
+          _vm._v(" "),
+          _vm.errors.name
+            ? _c(
+                "div",
+                _vm._l(_vm.errors.name, function(error) {
+                  return _c("p", { staticClass: "text-primary" }, [
+                    _vm._v(_vm._s(error))
+                  ])
+                })
+              )
+            : _vm._e()
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-button",
+        { attrs: { type: "submit", variant: "gradient-primary" } },
+        [_vm._v("Submit")]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-c5373dae", module.exports)
+  }
+}
+
+/***/ }),
 /* 225 */
 /***/ (function(module, exports) {
 
@@ -64477,6 +64896,480 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(36)
+/* script */
+var __vue_script__ = __webpack_require__(249)
+/* template */
+var __vue_template__ = __webpack_require__(250)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/offering/CreateOfferingComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6af6cc2e", Component.options)
+  } else {
+    hotAPI.reload("data-v-6af6cc2e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 249 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            first_name: '',
+            last_name: '',
+            errors: {}
+        };
+    },
+    methods: {
+        onSubmit: function onSubmit() {
+            var _this = this;
+
+            axios.post('/api/data/post/staff', {
+                first_name: this.first_name,
+                last_name: this.last_name
+            }).then(function (response) {
+                return console.log(response);
+            }).catch(function (error) {
+                return _this.errors = error.response.data.errors;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-form",
+    {
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+          return _vm.onSubmit($event)
+        }
+      }
+    },
+    [
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          { staticClass: "col-md-6" },
+          [
+            _c(
+              "b-form-group",
+              { attrs: { label: "Location" } },
+              [
+                _c("b-form-select", {
+                  staticClass: "mb-3",
+                  attrs: { options: _vm.pattern_options },
+                  model: {
+                    value: _vm.offering_pattern,
+                    callback: function($$v) {
+                      _vm.offering_pattern = $$v
+                    },
+                    expression: "offering_pattern"
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.offering_pattern
+                  ? _c(
+                      "div",
+                      _vm._l(_vm.errors.offering_pattern, function(error) {
+                        return _c("p", { staticClass: "text-primary" }, [
+                          _vm._v(_vm._s(error))
+                        ])
+                      })
+                    )
+                  : _vm._e()
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "b-form-group",
+              { attrs: { label: "Mode" } },
+              [
+                _c("b-form-select", {
+                  staticClass: "mb-3",
+                  attrs: { options: _vm.pattern_options },
+                  model: {
+                    value: _vm.offering_pattern,
+                    callback: function($$v) {
+                      _vm.offering_pattern = $$v
+                    },
+                    expression: "offering_pattern"
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.offering_pattern
+                  ? _c(
+                      "div",
+                      _vm._l(_vm.errors.offering_pattern, function(error) {
+                        return _c("p", { staticClass: "text-primary" }, [
+                          _vm._v(_vm._s(error))
+                        ])
+                      })
+                    )
+                  : _vm._e()
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "b-form-group",
+              { attrs: { label: "Projected Enrollment" } },
+              [
+                _c("b-form-input", {
+                  attrs: { placeholder: "Input the staff member's last name." },
+                  model: {
+                    value: _vm.last_name,
+                    callback: function($$v) {
+                      _vm.last_name = typeof $$v === "string" ? $$v.trim() : $$v
+                    },
+                    expression: "last_name"
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.last_name
+                  ? _c(
+                      "div",
+                      _vm._l(_vm.errors.last_name, function(error) {
+                        return _c("p", { staticClass: "text-primary" }, [
+                          _vm._v(_vm._s(error))
+                        ])
+                      })
+                    )
+                  : _vm._e()
+              ],
+              1
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-md-6" },
+          [
+            _c(
+              "b-form-group",
+              { attrs: { label: "Unit Code" } },
+              [
+                _c("b-form-select", {
+                  staticClass: "mb-3",
+                  attrs: { options: _vm.code_options },
+                  model: {
+                    value: _vm.unit_code,
+                    callback: function($$v) {
+                      _vm.unit_code = $$v
+                    },
+                    expression: "unit_code"
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.unit_code
+                  ? _c(
+                      "div",
+                      _vm._l(_vm.errors.unit_code, function(error) {
+                        return _c("p", { staticClass: "text-primary" }, [
+                          _vm._v(_vm._s(error))
+                        ])
+                      })
+                    )
+                  : _vm._e()
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "b-form-group",
+              { attrs: { label: "Teaching Pattern" } },
+              [
+                _c("b-form-select", {
+                  staticClass: "mb-3",
+                  attrs: { options: _vm.pattern_options },
+                  model: {
+                    value: _vm.offering_pattern,
+                    callback: function($$v) {
+                      _vm.offering_pattern = $$v
+                    },
+                    expression: "offering_pattern"
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.offering_pattern
+                  ? _c(
+                      "div",
+                      _vm._l(_vm.errors.offering_pattern, function(error) {
+                        return _c("p", { staticClass: "text-primary" }, [
+                          _vm._v(_vm._s(error))
+                        ])
+                      })
+                    )
+                  : _vm._e()
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "b-form-group",
+              { attrs: { label: "Status" } },
+              [
+                _c("b-form-textarea", {
+                  attrs: {
+                    placeholder: "Enter something",
+                    rows: 6,
+                    "max-rows": 6
+                  },
+                  model: {
+                    value: _vm.text,
+                    callback: function($$v) {
+                      _vm.text = $$v
+                    },
+                    expression: "text"
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.last_name
+                  ? _c(
+                      "div",
+                      _vm._l(_vm.errors.last_name, function(error) {
+                        return _c("p", { staticClass: "text-primary" }, [
+                          _vm._v(_vm._s(error))
+                        ])
+                      })
+                    )
+                  : _vm._e()
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          { staticClass: "col-md-12 text-center" },
+          [
+            _c(
+              "b-form-group",
+              { attrs: { label: "Status" } },
+              [
+                _c(
+                  "b-form-checkbox",
+                  {
+                    attrs: { value: "1", "unchecked-value": "0" },
+                    model: {
+                      value: _vm.status,
+                      callback: function($$v) {
+                        _vm.status = $$v
+                      },
+                      expression: "status"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                    Confirm (Check) Cancel (Unchecked)\n                "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm.errors.status
+                  ? _c(
+                      "div",
+                      _vm._l(_vm.errors.status, function(error) {
+                        return _c("p", { staticClass: "text-primary" }, [
+                          _vm._v(_vm._s(error))
+                        ])
+                      })
+                    )
+                  : _vm._e()
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "b-button",
+        { attrs: { type: "submit", variant: "gradient-secondary" } },
+        [_vm._v("Submit")]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6af6cc2e", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
