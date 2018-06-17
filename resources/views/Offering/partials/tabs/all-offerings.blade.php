@@ -2,7 +2,7 @@
 <div class="container-fluid mt-5">
     <div class="row">
         <div class="col-md-12">
-            <b-btn v-b-modal.staff-modal class="btn btn-gradient-primary"><i class="mdi mdi-plus"></i> New Staff</b-btn>
+            <b-btn v-b-modal.staff-modal class="btn btn-gradient-primary"><i class="mdi mdi-plus"></i> New Offering</b-btn>
         </div>
     </div>
     <div class="row mt-5">
@@ -10,34 +10,25 @@
             <table class="table table-hover mb-2">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Fraction</th>
-                        <th>Total Load</th>
-                        <th>Number Of Offerings</th>
-                        <th>Target</th>
-                        {{--
-                        <th>Unit Teaching</th>
-                        <th>Other Teaching</th>
-                        <th>Research Supervision</th>
-                        <th>Baseline Research</th>
-                        <th>Other Research</th>
-                        <th>Baseline Service</th>
-                        <th>Research Supervision</th>
-                        <th>Research Supervision</th>
-                        <th>Research Supervision</th> --}}
+                        <th>Unit Code</th>
+                        <th>Unit Name</th>
+                        <th>Period</th>
+                        <th>Location</th>
+                        <th>Mode</th>
+                        <th>Pattern</th>
+                        <th>Total Workload</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach($staff as $person)
                     <tr>
-                        <td><a href="/staff/{{$person->id}}">{{$person->first_name}} {{$person->last_name}}</td>
-                        <td class="text-danger"></td>
+                        <td></td>                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
-                    @endforeach --}}
-
                 </tbody>
             </table>
         </div>
@@ -45,5 +36,5 @@
 </div>
                        
 <b-modal id="staff-modal" hide-footer="true" title="Create a New Staff">
-    <create-staff></create-staff>
+    <create-offering></create-offering>
 </b-modal>

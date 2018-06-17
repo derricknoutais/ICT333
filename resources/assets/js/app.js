@@ -22,6 +22,7 @@ Vue.use(BootstrapVue);
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('create-staff', require('./components/staff/CreateStaffComponent.vue'));
 Vue.component('create-unit', require('./components/unit/CreateUnitComponent.vue'));
+Vue.component('create-offering', require('./components/offering/CreateOfferingComponent.vue'));
 
 const app = new Vue({
     el: '#app',

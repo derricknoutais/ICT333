@@ -41,8 +41,8 @@ Route::prefix('data')->group(function(){
     Route::post('units', 'UnitController@store');
 
     Route::get('offerings', 'OfferingController@index');
+    Route::get('patterns', 'PatternController@index');
     
-
 });
 
 
