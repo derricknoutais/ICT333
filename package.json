@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "bootstrap-vue": "^2.0.0-rc.11",
-        "compass-mixins": "^0.12.10"
+        "compass-mixins": "^0.12.10",
+        "vuelidate": "^0.7.4"
     }
 }

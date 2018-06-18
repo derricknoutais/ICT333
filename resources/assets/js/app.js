@@ -7,11 +7,12 @@
 
 require('./bootstrap');
 import BootstrapVue from 'bootstrap-vue';
+import Vuelidate from 'vuelidate'
 
 window.Vue = require('vue');
 
 Vue.use(BootstrapVue);
-
+Vue.use(Vuelidate)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

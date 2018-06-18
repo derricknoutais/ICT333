@@ -2,7 +2,7 @@
 <div class="container-fluid mt-5">
     <div class="row">
         <div class="col-md-12">
-            <b-btn v-b-modal.staff-modal class="btn btn-gradient-primary"><i class="mdi mdi-plus"></i> New Offering</b-btn>
+            <b-btn v-b-modal.offering-modal class="btn btn-gradient-primary"><i class="mdi mdi-plus"></i> New Offering</b-btn>
         </div>
     </div>
     <div class="row mt-5">
@@ -35,6 +35,6 @@
     </div>
 </div>
                        
-<b-modal id="staff-modal" hide-footer="true" title="Create a New Staff">
+<b-modal id="offering-modal" hide-footer="true" title="Create a New Staff">
     <create-offering></create-offering>
 </b-modal>
