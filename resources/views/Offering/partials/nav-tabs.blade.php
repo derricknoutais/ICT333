@@ -8,6 +8,4 @@
     <b-tab title="Uploader">
         @include('offering.partials.tabs.uploader')
     </b-tab>
-    
-    
 </b-tabs>

@@ -9,12 +9,12 @@
         <h3 class="page-title">
             <span class="page-title-icon bg-gradient-primary text-white mr-2">
                     <i class="mdi mdi-creation"></i>             
-                </span> Patterns
+                </span> Offering
         </h3>
     </div>
 
     <!-- nav tabs -->
-    @include('offering.partials.nav-tabs')
+    @include('pattern.partials.nav-tabs')
 
 
     
